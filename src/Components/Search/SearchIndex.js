@@ -17,8 +17,8 @@ export default class SearchIndex extends Component {
   }
 
   searchFunction = () => {
-    if (this.state.things.includes(this.state.searchTerm))
-      this.setState({ results: [this.state.searchTerm] })
+    if (this.state.things.includes(this.state.searchTerm.toLowerCase()))
+      this.setState({ results: [this.state.searchTerm.toLowerCase()] })
     else if (this.state.searchTerm !== '')
       this.setState({ results: ['no results'] })
     else
